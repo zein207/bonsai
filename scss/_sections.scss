@@ -146,6 +146,10 @@ main {
                 font-size: $s6;
                 margin-bottom: 10px;
             }
+
+            &--hidden {
+                display: none;
+            }
         }
     }
 }
@@ -366,4 +370,55 @@ footer {
             }
         }
     }
+}
+
+
+
+//TABLET
+
+@media screen and (min-width: 768px) {
+
+    .section-01{
+
+        &__text {
+            img {
+                width: 70%;
+                height: 300px;
+            }
+        }
+
+        &__images {
+
+            &__item {
+
+                height: 260px;
+            }
+        }
+    }
+
+    .section-02 {
+    
+        &__product-slider {
+    
+            &__item {
+
+                margin: 0 20px;
+    
+                &--hidden {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .section-03 {
+        img {
+            height: 440px;
+        }
+    }
+
+    .section__banner {
+        height: 400px;
+    }
+
 }
