@@ -24,32 +24,32 @@
         <ul class="navbar">
             <img class="navbar__img" src="img/plant-menu.png" alt="Plantita">
             <li class="navbar__item">
-                <a class="navbar__item__link" href="#">Home</a>
+                <a class="navbar__item__link" href="#home">Home</a>
             </li>
             <li class="navbar__item">
-                <a class="navbar__item__link" href="#">Category</a>
+                <a class="navbar__item__link" href="#category">Category</a>
             </li>
             <li class="navbar__item">
-                <a class="navbar__item__link" href="#">Features</a>
+                <a class="navbar__item__link" href="#features">Features</a>
             </li>
             <li class="navbar__item navbar__item--principal">
                 <a class="navbar__item__link" href="#">Bonsai</a>
             </li>
             <li class="navbar__item">
-                <a class="navbar__item__link" href="#">Shop</a>
+                <a class="navbar__item__link" href="#shop">Shop</a>
             </li>
             <li class="navbar__item">
-                <a class="navbar__item__link" href="#">Blog</a>
+                <a class="navbar__item__link" href="#blog">Blog</a>
             </li>
             <li class="navbar__item">
-                <a class="navbar__item__link" href="#">Contact</a>
+                <a class="navbar__item__link" href="#contact">Contact</a>
             </li>
         </ul>
 
         <i class="fas fa-times close-icon" id="closeIcon"></i>
     </nav>
 
-    <div class="menu">
+    <div class="menu" id="menu">
         <div class="menu__logo">
             <h1>Bonsai</h1>
         </div>
@@ -66,9 +66,9 @@
         </ul>
     </div>
 
-    <section class="banner">
+    <section class="banner" id="home">
         <img class="banner__img" src="./img/plant-banner-d-05.jpg" alt="Plantita chida">
-        <div class="banner__text">
+        <div class="banner__text" id="bannerText">
             <h1>Plant for interior</h1>
             <h3>Bring freshness to your architecture</h3>
             <div class="btn">See more...</div>
@@ -77,13 +77,13 @@
 
     <main>
         
-        <section class="section-01">
+        <section class="section-01" id="category">
             <div class="section-01__text">
                 <h2>Plant Interior</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, labore? Dolorem in quo expedita eaque officia optio recusandae eum, ut, libero labore voluptatum aliquam magnam culpa laborum, placeat accusamus earum. Eligendi eius odio perferendis commodi mollitia voluptates quam molestias amet?</p>
 
                 <div class="btn">Shop Now</div>
-                <img src="./img/plant-01.jpg" alt="Plantita chida">
+                <img src="./img/plant-11.jpg" alt="Plantita chida">
             </div>
 
             <div class="section-01__images">
@@ -102,7 +102,7 @@
             </div>
         </section>
 
-        <section class="section-02">
+        <section class="section-02" id="shop">
 
             <h2>New <span>Product</span></h2>
 
@@ -135,7 +135,7 @@
             </div>
         </section>
 
-        <section class="section-04">
+        <section class="section-04" id="features">
             <h2>Featured <span>Product</span></h2>
 
             <div class="section-04__product-list">
@@ -205,7 +205,84 @@
             <i class="fas fa-chevron-down" id="showProductList"></i>
         </section>
 
-        <img src="img/plant-banner-d-04.jpg" class="img" alt="">
+        <div class="section__banner">
+            <img src="img/plant-banner-d-02.jpg" alt="Cuarto con plantitas">
+        </div>
+
+        <section class="section-05" id="blog">
+            <h2>Latest <span>News</span></h2>
+
+            <div class="section-05__news">
+
+                <div class="section-05__news__item">
+                    <div class="section-05__news__item__img-wrapper">
+                        <img src="img/plant-14.jpg" alt="Noticia sobre plantitas y eso">
+                        <div class="tag">03/04/2021</div>
+                    </div>
+                    <h4>For your workspace more innovative</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, voluptates?...</p>
+                    <div class="btn btn-transparent">Read More</div>
+                </div>
+
+                <div class="section-05__news__item">
+                    <div class="section-05__news__item__img-wrapper">
+                        <img src="img/plant-banner-d-03.jpg" alt="Noticia sobre plantitas y eso">
+                        <div class="tag">03/04/2021</div>
+                    </div>
+                    <h4>For your workspace more innovative</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, voluptates?...</p>
+                    <div class="btn btn-transparent">Read More</div>
+                </div>
+
+                <div class="section-05__news__item">
+                    <div class="section-05__news__item__img-wrapper">
+                        <img src="img/plant-banner-d-04.jpg" alt="Noticia sobre plantitas y eso">
+                        <div class="tag">03/04/2021</div>
+                    </div>
+                    <h4>For your workspace more innovative</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, voluptates?...</p>
+                    <div class="btn btn-transparent">Read More</div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="newsletter" id="contact">
+
+            <h2>Newsletter Signup</h2>
+            <p>Subscribe to get latest news, notifications and more information discounts</p>
+            <input type="text" placeholder="Enter your email...">
+            <div class="btn">Subscribe</div>
+
+        </div>
+
+        <footer>
+            <div class="section__banner footer__banner">
+                <img src="img/plant-01.jpg" alt="Cuarto con plantitas">
+                <ul class="social__list">
+                    <li class="social__list__item">
+                        <a href="#" class="social__list__item__link">
+                            <i class="fab fa-facebook-f social__list__item__logo"></i>
+                        </a>
+                    </li>
+                    <li class="social__list__item">
+                        <a href="#" class="social__list__item__link">
+                            <i class="fab fa-pinterest-p social__list__item__logo"></i>
+                        </a>
+                    </li>
+                    <li class="social__list__item">
+                        <a href="#" class="social__list__item__link">
+                            <i class="fab fa-twitter social__list__item__logo"></i>
+                        </a>
+                    </li>
+                    <li class="social__list__item">
+                        <a href="#" class="social__list__item__link">
+                            <i class="fab fa-instagram social__list__item__logo"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
 
     </main>
 

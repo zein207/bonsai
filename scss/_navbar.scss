@@ -82,6 +82,8 @@ nav {
     padding: 0 10px;
     z-index: 100;
     background: $title-secondary;
+    transition-property: top;
+    transition-duration: 0.5s;
 
     &__logo {
         width: 70%;

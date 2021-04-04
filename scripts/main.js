@@ -1,20 +1,52 @@
 const navbar = document.getElementById('navbar');
 const menuIcon = document.getElementById('menuIcon');
 const closeIcon = document.getElementById('closeIcon');
-const mask = document.getElementById('mask')
+const mask = document.getElementById('mask');
+const itemsNavbar = document.querySelectorAll('.navbar__item__link');
 
 const showMenu = () => {
     navbar.classList.toggle('show');
     mask.classList.toggle('hidde');
 }
 
-menuIcon.addEventListener('click', showMenu)
+itemsNavbar.forEach(element => {
+    element.addEventListener('click', showMenu);
+});
 
-closeIcon.addEventListener('click', showMenu)
+menuIcon.addEventListener('click', showMenu);
 
-mask.addEventListener('click', showMenu)
+closeIcon.addEventListener('click', showMenu);
+
+mask.addEventListener('click', showMenu);
+
+//####################################################################
+
+const bannerText = document.getElementById('bannerText');
+
+window.addEventListener('load', () => {
+    bannerText.classList.toggle('show-banner-text')
+})
+
+//####################################################################
 
 
+let ubicacion = window.pageYOffset;
+
+const menuAnimation = () => {
+
+    const menu = document.getElementById('menu');
+    let currentScroll = window.pageYOffset;
+    if(ubicacion >= currentScroll) {
+        menu.style.top = '0';
+    } else {
+        menu.style.top = '-70px';
+    }
+    ubicacion = currentScroll;
+}
+
+window.addEventListener('scroll', menuAnimation)
+
+//####################################################################
 
 const productList = document.getElementById('productList');
 const showProductList = document.getElementById('showProductList');

@@ -7,4 +7,26 @@
     text-transform: uppercase;
     cursor: pointer;
     font-family: 'Source Sans Pro';
+    transition-property:background-color, color;
+    transition-duration: 1s;
+
+    &:hover {
+        border: 1px solid $primary;
+        background-color: transparent;
+        color: $primary;
+    }
+
+    &-transparent {
+        color: $primary;
+        background-color: transparent;
+        transition-property:background-color, color;
+        transition-duration: 1s;
+
+        &:hover {
+            background-color: $primary;
+            color: $title-secondary;
+        }
+    
+    }
 }
+
