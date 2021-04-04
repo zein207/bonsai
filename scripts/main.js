@@ -24,7 +24,7 @@ mask.addEventListener('click', showMenu);
 const bannerText = document.getElementById('bannerText');
 
 window.addEventListener('load', () => {
-    bannerText.classList.toggle('show-banner-text')
+    bannerText.classList.toggle('show-banner-text');
 })
 
 //####################################################################
@@ -34,7 +34,12 @@ let ubicacion = window.pageYOffset;
 
 const menuAnimation = () => {
 
-    const menu = document.getElementById('menu');
+    let menu = document.getElementById('menu');
+
+    if (window.pageYOffset == 0) {
+        menu.style.top = '0';
+    }
+
     let currentScroll = window.pageYOffset;
     if(ubicacion >= currentScroll) {
         menu.style.top = '0';
