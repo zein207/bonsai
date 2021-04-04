@@ -36,9 +36,7 @@ const menuAnimation = () => {
 
     let menu = document.getElementById('menu');
 
-    if (window.pageYOffset == 0) {
-        menu.style.top = '0';
-    }
+//    console.log(window.pageYOffset);
 
     let currentScroll = window.pageYOffset;
     if(ubicacion >= currentScroll) {
@@ -47,6 +45,11 @@ const menuAnimation = () => {
         menu.style.top = '-70px';
     }
     ubicacion = currentScroll;
+
+    if (window.pageYOffset <= 70) {
+        menu.style.top = '0';
+//        console.log('something')
+    }
 }
 
 window.addEventListener('scroll', menuAnimation)
