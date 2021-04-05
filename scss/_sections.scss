@@ -161,11 +161,13 @@ main {
     align-items: center;
     position: relative;
     margin: 70px 0;
+    overflow: hidden;
 
     img {
         width: 100%;
         height: 300px;
         object-fit: cover;
+        position: relative;
     }
 
     h2 {
@@ -344,36 +346,6 @@ main {
     }
 }
 
-footer {
-    width: 100%;
-
-    .footer__banner {
-        margin-bottom: 0;
-        height: 220px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        .social__list {
-            width: 90%;
-            position: absolute;
-            display: flex;
-            justify-content: space-evenly;
-
-            &__item{
-
-                &__link {
-                    color: $title;
-                }
-            }
-        }
-    }
-}
-
-
-
 //TABLET
 
 @media screen and (min-width: 768px) {
@@ -404,7 +376,7 @@ footer {
 
                 margin: 0 20px;
     
-                &--hidden {
+                &--hidden:nth-child(3) {
                     display: block;
                 }
             }
@@ -419,6 +391,146 @@ footer {
 
     .section__banner {
         height: 400px;
+    }
+
+}
+
+//DESKTOP
+
+@media screen and (min-width: 1024px) {
+
+    .section-01 {
+        width: 80%;
+        flex-direction: row;
+        margin-top: 60px;
+
+        &__text {
+            width: 50%;
+
+            h2 {
+                font-size: $s3;
+            }
+    
+            p {
+                letter-spacing: 1px;
+            }
+        }
+
+        &__images {
+            width: 50%;
+            margin-top: 0;
+
+            &__item {
+
+                img {
+                    height: 95%;
+                    cursor: pointer;
+                }
+
+                
+                &:nth-child(3) {
+
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .section-02 {
+
+        padding-bottom: 100px;
+
+        h2 {
+            font-size: $s3;
+            margin: 55px 0;
+        }
+    
+        &__product-slider {
+    
+            &__item {
+
+                margin: 0 15px;
+                cursor: pointer;
+
+                img {
+                    height: 160px;
+                }
+    
+                &--hidden:nth-child(4),
+                &--hidden:nth-child(5) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .section-03 {
+
+        img {
+            object-position: bottom;
+            height: 600px;
+        }
+    }
+
+    .section-04 {
+
+        h2 {
+            font-size: $s3;
+        }
+
+        #showProductList {
+            display: none;
+        }
+
+        .product-container {
+            display: flex;
+            padding: 0 120px;
+        }
+
+        &__product-list {
+            width: 50%;
+
+            &__item {
+                cursor: pointer;
+
+                .quick-view {
+                    opacity: 0;
+                    transition-property: opacity;
+                    transition-duration: 0.6s;
+                }
+
+                &:hover .quick-view{
+                    opacity: 1;
+                }
+            }
+        }
+    
+        &__product-list-02 {
+            height: auto;
+            width: 50%;
+        }
+    
+
+    }
+
+    .section-05 {
+
+        h2 {
+            font-size: $s2;
+            margin: 70px 0;
+        }
+
+        &__news {
+            flex-direction: row;
+
+            &__item {
+                width: 100%;
+                margin: 0 15px 45px 0;
+            }
+        }
     }
 
 }

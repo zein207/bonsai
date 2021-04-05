@@ -1,6 +1,7 @@
 .btn {
     background-color: $primary;
     border-radius: 20px;
+    border: 1px solid $primary;
     color: $title-secondary;
     display: inline;
     padding: 10px 20px;
@@ -21,6 +22,7 @@
         background-color: transparent;
         transition-property:background-color, color;
         transition-duration: 1s;
+        border: 1px solid transparent;
 
         &:hover {
             background-color: $primary;

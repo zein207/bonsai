@@ -6,17 +6,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     &__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        position: relative;
     } 
 
     &__text {
         text-align: center;
         position: absolute;
-        top: 20%;
+        top: 190px;
         opacity: 0;
         transition-property: opacity;
         transition-duration: 1s;
@@ -34,4 +36,25 @@
 
 .show-banner-text {
     opacity: 1;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .banner {
+
+        &__text {
+
+            h1 {
+                font-size: 5rem;
+            }
+
+            h3 {
+                letter-spacing: 1px;
+                margin: 12px 0 35px 0;
+            }
+
+        }
+
+    }
+    
 }
