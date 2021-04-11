@@ -22,18 +22,17 @@ closeIcon.addEventListener('click', showMenu);
 mask.addEventListener('click', showMenu);
 
 //############################BANNER ANIMATION########################################
-
 const bannerText = document.getElementById('bannerText');
 const bannerImg = document.getElementById('bannerImg');
 
 const bannerText3 = document.getElementById('bannerText3');
 const bannerImg3 = document.getElementById('bannerImg3');
 
-window.addEventListener('load', () => {
+// window.addEventListener('load', () => {
 
-    bannerText.classList.toggle('show-banner-text');
-    bannerText.style.top = '190px';
-})
+//     bannerText.classList.toggle('show-banner-text');
+//     bannerText.style.top = '190px';
+// })
 
 window.addEventListener('scroll', () => {
 
@@ -101,4 +100,17 @@ showProductList.addEventListener('click', () => {
 
 
 //####################################################################
+
+window.addEventListener('scroll', () => {
+    const imgParallax = document.getElementById('imgParallax');
+    let scrollPosition = window.pageYOffset;
+
+    if(window.innerWidth > 1024) {
+        imgParallax.style.transform = `translateY(${-1690 + (scrollPosition * 0.5)}px)`
+    } else {
+        imgParallax.style.transform = `translateY(0px)`
+    }
+
+
+})
 
